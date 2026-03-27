@@ -1,0 +1,31 @@
+<h1>予定一覧</h1>
+<button><%= link_to "新規追加", :new_schedule %></button>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>終日</th>
+      <th>更新日時</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.id %></td>
+        <td><%= schedule.title %></td>
+        <td><%= schedule.start_date %></td>
+        <td><%= schedule.end_date %></td>
+        <td><%= schedule.all_day %></td>
+        <td><%= schedule.updated_at %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<p>予定合計 <%= @schedules.count %>件</p>
+<p>本日の日付 <%= Date.today.strftime("%Y年%m月%d日")%></p>
