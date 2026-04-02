@@ -1,5 +1,3 @@
-<%= schedule.start_date.strftime("%Y/%m/%d") %> #開始日用の設定
+Time::DATE_FORMATS[:date] = "%Y/%m/%d" #日付用フォーマット
 
-<%= schedule.end_date.strftime("%Y/%m/%d") %> #終了日用の設定
-
-<%= schedule.updated_at.strftime("%Y/%m/%d %H:%M") %> #更新日時用の設定
+Time::DATE_FORMATS[:datetime] = "%Y/%m/%d %H:%M" #日時用フォーマット

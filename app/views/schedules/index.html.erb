@@ -1,3 +1,5 @@
+<div class="container">
+
 <div class="index-header">
   <h2>予定一覧</h2>
   <%= link_to "⊕新規追加", :new_schedule, class: "addition_button" %>
@@ -23,10 +25,10 @@
       <tr>
         <td><%= schedule.id %></td>
         <td><%= schedule.title %></td>
-        <td><%= schedule.start_date.strftime("%Y/%m/%d") %></td>
-        <td><%= schedule.end_date.strftime("%Y/%m/%d") %></td>
+        <td><%= schedule.start_date.to_fs(:date) %></td>
+        <td><%= schedule.end_date.to_fs(:date) %></td>
         <td><%= schedule.all_day ? "○" : "" %></td> 
-        <td><%= schedule.updated_at.strftime("%Y/%m/%d %H:%M") %></td>
+        <td><%= schedule.updated_at.to_fs(:datetime) %></td>
         <td>
           <%= link_to "詳細", schedule %>
         </td>
@@ -43,5 +45,6 @@
 
 <div class="index-footer">
 <p>予定合計 <%= @schedules.count %>件</p>
-<p>本日の日付 <%= Date.today.strftime("%Y/%m/%d")%></p>
+<p>本日の日付 <%= Date.today.to_fs(:date) %></p>
+</div>
 </div>
