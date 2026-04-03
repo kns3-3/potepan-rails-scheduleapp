@@ -6,14 +6,14 @@ class SchedulesController < ApplicationController
   def new
     @schedule = Schedule.new
   end
-  
+
   def create
     @schedule = Schedule.new(params.require(:schedule).permit(:title, :start_date, :end_date, :all_day, :memo))
     if @schedule.save
       flash[:notice] = "スケジュールを保存しました"
        redirect_to schedules_path
     else
-      render"new", status: :unprocessable_entity
+      render "new", status: :unprocessable_entity
     end
   end
 
