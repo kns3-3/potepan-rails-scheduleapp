@@ -1,202 +1,202 @@
 /*---共通設定---*/
 /*全要素の余白をリセット*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fffafb;
-    color: #444;
-    font-family: sans-serif;
+  background-color: #fffafb;
+  color: #444;
+  font-family: sans-serif;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .main-header {
-    background-color: #ffb6c1;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items:center;
-    justify-content:center;
+  background-color: #ffb6c1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .notice {
-    background-color: #f5f5f5
+  background-color: #f5f5f5
 }
 
 /*---予定一覧画面---*/
 .index-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
 }
 
 .addition_button{
-    border: 1px solid #ffb6c1;
-    border-radius: 15px;
-    background-color: #ffb6c1;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-decoration: none; /*リンクの下線を削除*/
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*ボタンの枠に影をつける*/
+  border: 1px solid #ffb6c1;
+  border-radius: 15px;
+  background-color: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none; /*リンクの下線を削除*/
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*ボタンの枠に影をつける*/
 }
 
 .addition_button:hover {
-    opacity: 0.6; /*カーソルが当たると透ける*/
+  opacity: 0.6; /*カーソルが当たると透ける*/
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse; /*セル同士の隙間をなくす*/
-    margin: 30px auto;
-    background-color: white;
-    border: 1px solid #ffb6c1;
-    border-radius: 10px;
-    overflow: hidden; /*角を丸くする*/
+  width: 100%;
+  border-collapse: collapse; /*セル同士の隙間をなくす*/
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid #ffb6c1;
+  border-radius: 10px;
+  overflow: hidden; /*角を丸くする*/
 }
 
 table th {
-    background-color: #ffb6c1;
-    color: white;
-    border: none;
-    padding: 16px;
-    font-weight: bold;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-weight: bold;
 }
 
 table td {
-    border-bottom: 1px solid #f5d0d5;
-    padding: 16px; 
-    text-align: center;
+  border-bottom: 1px solid #f5d0d5;
+  padding: 16px; 
+  text-align: center;
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #ffedf3; /*偶数行を薄いピンクに*/
+  background-color: #ffedf3; /*偶数行を薄いピンクに*/
 }
 
 table tbody tr:hover {
-    background-color: #ffd1da; /*マウスを乗せたときに行の色が変わる*/
+  background-color: #ffd1da; /*マウスを乗せたときに行の色が変わる*/
 }
 
 .index-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #ffb6c1;
-    border-radius: 5px;
-    background-color: #fff0f2;
-    color: black;
-    margin: 80px 20px;
-    padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #ffb6c1;
+  border-radius: 5px;
+  background-color: #fff0f2;
+  color: black;
+  margin: 80px 20px;
+  padding: 20px 20px;
 }
 
 /*---新規追加画面(new)---*/
 
 .form_wrapper {
-    margin: 10px auto;
-    max-width: 500px;
+  margin: 10px auto;
+  max-width: 500px;
 }
 
 .form_wrapper h2 {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
 
 .schedule-new {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: white;
-    border: 1px solid #ffb6c1;
-    border-radius: 10px;
-    padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  border: 1px solid #ffb6c1;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .title label::after,
 .date_group label::after {
-    content: "*";
-    color: red;
-    font-weight: bold;
+  content: "*";
+  color: red;
+  font-weight: bold;
 }
 
 .title {
-   margin: 15px 0;
+  margin: 15px 0;
 }
 
 .title label {
-    display: block;
-    margin-bottom: 10px; /*文字とフォーム間の隙間*/
+  display: block;
+  margin-bottom: 10px; /*文字とフォーム間の隙間*/
 }
 
 .title_field input {
-    width: 100%;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    border: 1px solid #c0c0c0;
-    border-radius: 5px
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px
 }
 
 .start_end_date {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /*左右均等に配置した箱に隙間を作る*/
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /*左右均等に配置した箱に隙間を作る*/
+  padding: 10px 0;
 }
 
 .date_group {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /*箱が横いっぱいに広がる*/
-    gap: 10px; /*文字とカレンダーの間の隙間*/
+  display: flex;
+  flex-direction: column;
+  flex: 1; /*箱が横いっぱいに広がる*/
+  gap: 10px; /*文字とカレンダーの間の隙間*/
 }
 
 .date_group input {
-    padding: 10px 15px;
-    box-sizing: border-box;
-    border: 1px solid #c0c0c0;
-    border-radius: 5px
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px
 }
 
 .check_box {
-    display: flex;
-    align-items: center;
-    margin-top: -10px;
-    gap: 7px; /*ボックスと文字間の隙間*/
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  gap: 7px; /*ボックスと文字間の隙間*/
 }
 
 .check_box input {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .check_box label {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 
 .memo {
-   margin: 15px 0;
+  margin: 15px 0;
 }
 
 .memo label {
-    display: block;
-    margin-bottom: 10px; /*文字とフォーム間の隙間*/
+  display: block;
+  margin-bottom: 10px; /*文字とフォーム間の隙間*/
 }
 
 .memo_field textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    border: 1px solid #c0c0c0;
-    border-radius: 5px
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px
 }
 
 .form_actions {
@@ -208,88 +208,88 @@ table tbody tr:hover {
 
 .form_actions a,
 .form_actions input {
-    display: inline-block; /*aタグをボタンとして扱う*/
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #333;
-    text-decoration: none;
-    border: 1px solid #333;
-    border-radius: 5px;
-    cursor: pointer;
-    box-sizing: border-box; /*ボタンのサイズ計算を等しくする*/
+  display: inline-block; /*aタグをボタンとして扱う*/
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box; /*ボタンのサイズ計算を等しくする*/
 }
 
 .form_actions a {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .form_actions input {
-    background-color: #ffb6c1;
+  background-color: #ffb6c1;
 }
 
 .form_actions a:hover,
 .form_actions input:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 
 /*---詳細画面(show)---*/
 .back_link a {
-    display: inline-block;
-    margin: 10px 20px;
-    color: #ff69b4;
-    font-weight: bold;
-    text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  color: #ff69b4;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .show_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .edit_btn {
-    text-align: right;
-    margin: 10px;
+  text-align: right;
+  margin: 10px;
 }
 
 .edit_btn a {
-    display: inline-block;
-    border: 1px solid #ffb6c1;
-    border-radius: 15px;
-    background-color: #ffb6c1;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-decoration: none; /*リンクの下線を削除*/
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*ボタンの枠に影をつける*/
+  display: inline-block;
+  border: 1px solid #ffb6c1;
+  border-radius: 15px;
+  background-color: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none; /*リンクの下線を削除*/
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*ボタンの枠に影をつける*/
 }
 
 .edit_btn:hover {
-    opacity: 0.6; /*カーソルが当たると透ける*/
+  opacity: 0.6; /*カーソルが当たると透ける*/
 }
 
 .show_box {
-    width: 100%;
-    margin: 0px auto;
+  width: 100%;
+  margin: 0px auto;
 }
 
 .show_table {
-    width: 100%;
-    border: 2px solid #ffb6c1;
-    border-radius: 15px;
-    overflow: hidden;
+  width: 100%;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .show_table th {
-    border: 1px solid white;
-    padding: 18px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /*白文字に陰をつける*/
+  border: 1px solid white;
+  padding: 18px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /*白文字に陰をつける*/
 }
 
 .show_table td {
-    padding: 18px;
-    background-color: #ffeef2;
-    color: #555;
+  padding: 18px;
+  background-color: #ffeef2;
+  color: #555;
 }

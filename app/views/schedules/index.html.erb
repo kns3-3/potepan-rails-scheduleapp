@@ -1,50 +1,50 @@
 <div class="container">
 
-<div class="index-header">
-  <h2>予定一覧</h2>
-  <%= link_to "⊕新規追加", :new_schedule, class: "addition_button" %>
-</div>
+  <div class="index-header">
+    <h2>予定一覧</h2>
+    <%= link_to "⊕新規追加", :new_schedule, class: "addition_button" %>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>タイトル</th>
-      <th>開始日</th>
-      <th>終了日</th>
-      <th>終日</th>
-      <th>更新日時</th>
-      <th>詳細</th>
-      <th>編集</th>
-      <th>削除</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @schedules.each do |schedule| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= schedule.id %></td>
-        <td><%= schedule.title %></td>
-        <td><%= schedule.start_date.to_fs(:date) %></td>
-        <td><%= schedule.end_date.to_fs(:date) %></td>
-        <td><%= schedule.all_day ? "○" : "" %></td> 
-        <td><%= schedule.updated_at.to_fs(:datetime) %></td>
-        <td>
-          <%= link_to "詳細", schedule %>
-        </td>
-        <td>
-          <%= link_to "編集", [:edit,schedule] %>
-        </td>
-        <td>
-          <%= link_to "削除", schedule,data:{turbo_method: :delete, turbo_confirm: "予定を削除しますか？"} %> 
-        </td>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+        <th>詳細</th>
+        <th>編集</th>
+        <th>削除</th>
       </tr>
-    <%end%>
-  </tbody>
-</table>
+    </thead>
 
-<div class="index-footer">
-<p>予定合計 <%= @schedules.count %>件</p>
-<p>本日の日付 <%= Date.today.to_fs(:date) %></p>
-</div>
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td><%= schedule.title %></td>
+          <td><%= schedule.start_date.to_fs(:date) %></td>
+          <td><%= schedule.end_date.to_fs(:date) %></td>
+          <td><%= schedule.all_day ? "○" : "" %></td> 
+          <td><%= schedule.updated_at.to_fs(:datetime) %></td>
+          <td>
+            <%= link_to "詳細", schedule %>
+          </td>
+          <td>
+            <%= link_to "編集", [:edit,schedule] %>
+          </td>
+          <td>
+            <%= link_to "削除", schedule,data:{turbo_method: :delete, turbo_confirm: "予定を削除しますか？"} %> 
+          </td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+
+  <div class="index-footer">
+    <p>予定合計 <%= @schedules.count %>件</p>
+    <p>本日の日付 <%= Date.today.to_fs(:date) %></p>
+  </div>
 </div>
