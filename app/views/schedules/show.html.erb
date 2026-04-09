@@ -1,0 +1,39 @@
+<div class="container">
+
+<div class="back_link">
+  <%= link_to "←    一覧に戻る", schedules_path %>
+</div>
+
+<div class="show_box">
+   <div class="show_header">
+     <h2>予定詳細</h2>
+     <div class="edit_btn">
+       <%= link_to "編集", [:edit,@schedule] %>
+     </div>
+    </div>
+    
+
+  <table class="show_table">
+    <tr>
+      <th>タイトル</th>
+     <td><%= @schedule.title %></td>
+    </tr>
+    <tr>
+      <th>開始日</th>
+      <td><%= @schedule.start_date.to_fs(:date) %></td>
+    </tr>
+    <tr>
+      <th>終了日</th>
+      <td><%= @schedule.end_date.to_fs(:date) %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <td><%= @schedule.all_day ? "○" : "" %></td>
+    </tr>
+    <tr>
+      <th>メモ</th>
+      <td><%= simple_format(@schedule.memo) %></td>
+    </tr>
+  </table>
+</div>
+</div>
